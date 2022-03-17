@@ -15,7 +15,7 @@ Personalized Activity Intelligence (PAI)
 The following assumptions found the basis of the model design:
 
 1) Intensity of exercise at individual level is appropriately assessed by using % of heart rate reserve [heart rate relative to resting heart rate and maximum heart rate]. 
-2) Very low intensity does not contribute to increased cardiorespiratory fitness, suggesting that a threshold exist before PAI can be accumulated1.
+2) Very low intensity does not contribute to increased cardiorespiratory fitness, suggesting that a threshold exist before PAI can be accumulated.
 3) Increased intensity has been shown to dramatically reduce the amount of exercise needed to increase cardiorespiratory fitness, suggesting a non-linear scaling of intensity for the model2. 
 4) Exercise level is fundamentally a product of intensity and time, where assessment from a continuous data stream of heart rate is achieved by integrating the nonlinearly scaled intensity over time.
 5) Effect of exercise is most prominent from an inactive baseline, where increased levels show a gradually decaying effect on cardiorespiratory fitness improvement. 
