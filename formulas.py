@@ -6,6 +6,8 @@ import numpy as np
 import scipy.integrate
 import math
 
+# Interpreting z(t) into the integral to get P, gives:
+# P = c1(c2(e^c2*y(0) -e^c2*y(-T) -T)
 
 coefs = {'male': {'c1': 10.1817,
                   'c2': 5.7808,
@@ -26,8 +28,11 @@ def get_normalized_yt(yt, ymax, y_threshold):
     return out
 
 
-def get_z_t(yt, gender='male'):
-    return coefs[gender]['c1'] * (math.exp(coefs[gender]['c2'] * yt) - 1)
+def get_z_t(yt0, yt_t, t, gender='male'):
+    return coefs[gender]['c1'] * \
+           (coefs[gender]['c2'] *
+            (math.exp(coefs[gender]['c2'] * yt0) - (math.exp(coefs[gender]['c2'] * yt_t)))
+            - t)
 
 
 def calculate_v(P, gender='male'):
